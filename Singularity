@@ -14,3 +14,15 @@ From: asachet/rocker-stan
       repos='https://cran.revolutionanalytics.com/', \
       dependencies=TRUE, \
       clean = TRUE)"
+
+   #add R packages from bioconductor
+   Rscript -e "install.packages('BiocManager')"
+   Rscript -e "library(BiocManager); install('GenomicRanges')"
+   Rscript -e "library(BiocManager); install('IRanges')"
+   Rscript -e "library(BiocManager); install('Biostrings')"
+   Rscript -e "library(BiocManager); install('Rsamtools')"
+   Rscript -e "library(BiocManager); install('seqinr')"
+   Rscript -e "library(BiocManager); install('rtracklayer')"
+
+  # add R packages from github
+   Rscript -e "library(devtools); install_github('marcjwilliams1/dndscv')"
